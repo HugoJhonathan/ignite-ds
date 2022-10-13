@@ -5,14 +5,17 @@ import { Heading } from './components/Heading'
 import { Text } from './components/Text'
 import { TextInput } from './components/TextInput'
 import { Logo } from './Logo'
+import storybookLogo from './assets/storybook.svg'
 import './styles/global.css'
+import './App.css'
 
 function App() {
   return (
-    <div className="w-screen h-screen bg-gray-900 flex items-center flex-col justify-center text-gray-100">
+    <div className="w-full h-screen bg-gray-900 flex items-center flex-col justify-center text-gray-100">
+
 
       <header className='flex flex-col items-center'>
-        <Logo />
+        <Logo className='App-logo' />
         <Heading size='lg' className="mt-4">
           Ignite Lab
         </Heading>
@@ -30,7 +33,7 @@ function App() {
             <TextInput.Icon>
               <Envelope />
             </TextInput.Icon>
-            <TextInput.Input type="email" id="email" placeholder='Digite seu e-mail' />
+            <TextInput.Input type="email" autoComplete='off' autoFocus id="email" placeholder='Digite seu e-mail' />
           </TextInput.Root>
         </label>
 
@@ -63,6 +66,13 @@ function App() {
           <a href="" className="text-gray-400 underline hover:text-gray-200">Não possui conta? Crie uma agora!</a>
         </Text>
       </footer>
+
+      <a href="./storybook" target='_blank' className='mt-6 flex flex-col items-center justify-center bg-white py-1 px-2 rounded'>
+        <Text size='sm' className='text-black font-bold' >
+          View
+        </Text>
+        <img src={storybookLogo} className="h-[30px]" />
+      </a>
 
     </div>
   )

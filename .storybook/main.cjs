@@ -25,6 +25,7 @@ module.exports = {
     "@storybook/addon-interactions",
     "@storybook/addon-a11y"
   ],
+  staticDirs: ['../public'],
 
   typescript: {
     reactDocgen: 'react-docgen-typescript',
